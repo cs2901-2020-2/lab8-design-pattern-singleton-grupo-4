@@ -1,3 +1,5 @@
+package cs.lab;
+
 public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
@@ -15,15 +17,13 @@ public class ChocolateBoiler {
     }
 
     public void drain(){
-        if(isEmpty() && isBoiled()){
-            //drain the boiled milk and chocolate
+        if(!isEmpty() && isBoiled()){
             empty = true;
         }
     }
 
     public void boil(){
-        if(!isEmpty() && isBoiled()){
-            //bring the contents to a boil
+        if(!isEmpty() && !isBoiled()){
             boiled = true;
         }
     }
